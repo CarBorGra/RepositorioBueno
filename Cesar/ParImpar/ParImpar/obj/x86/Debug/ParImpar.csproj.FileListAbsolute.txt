@@ -1,0 +1,4 @@
+C:\Repositorio2Dam\Cesar\ParImpar\ParImpar\bin\Debug\ParImpar.exe
+C:\Repositorio2Dam\Cesar\ParImpar\ParImpar\bin\Debug\ParImpar.pdb
+C:\Repositorio2Dam\Cesar\ParImpar\ParImpar\obj\x86\Debug\ParImpar.exe
+C:\Repositorio2Dam\Cesar\ParImpar\ParImpar\obj\x86\Debug\ParImpar.pdb

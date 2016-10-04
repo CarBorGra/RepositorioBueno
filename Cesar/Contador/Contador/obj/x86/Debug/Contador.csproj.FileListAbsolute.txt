@@ -1,0 +1,4 @@
+C:\Repositorio2Dam\Cesar\Contador\Contador\bin\Debug\Contador.exe
+C:\Repositorio2Dam\Cesar\Contador\Contador\bin\Debug\Contador.pdb
+C:\Repositorio2Dam\Cesar\Contador\Contador\obj\x86\Debug\Contador.exe
+C:\Repositorio2Dam\Cesar\Contador\Contador\obj\x86\Debug\Contador.pdb

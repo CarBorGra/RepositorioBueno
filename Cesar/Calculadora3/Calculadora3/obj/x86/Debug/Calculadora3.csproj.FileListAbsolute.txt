@@ -1,0 +1,4 @@
+C:\Repositorio2Dam\Cesar\Calculadora3\Calculadora3\bin\Debug\Calculadora3.exe
+C:\Repositorio2Dam\Cesar\Calculadora3\Calculadora3\bin\Debug\Calculadora3.pdb
+C:\Repositorio2Dam\Cesar\Calculadora3\Calculadora3\obj\x86\Debug\Calculadora3.exe
+C:\Repositorio2Dam\Cesar\Calculadora3\Calculadora3\obj\x86\Debug\Calculadora3.pdb

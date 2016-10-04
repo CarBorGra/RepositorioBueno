@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hola">Hola en Castellano!</string>
+    <string name="unchanged">Texto sin cambiar</string>
+</resources>

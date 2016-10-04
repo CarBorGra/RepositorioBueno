@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AplicacionBotonTextoIdioma</string>
+    <string name="hola">Hello in English!</string>
+    <string name="unchanged">Unchanged Text</string>
+</resources>

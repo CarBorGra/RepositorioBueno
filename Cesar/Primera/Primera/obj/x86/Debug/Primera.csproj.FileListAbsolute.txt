@@ -1,0 +1,4 @@
+C:\Repositorio2Dam\Cesar\Primera\Primera\bin\Debug\Primera.exe
+C:\Repositorio2Dam\Cesar\Primera\Primera\bin\Debug\Primera.pdb
+C:\Repositorio2Dam\Cesar\Primera\Primera\obj\x86\Debug\Primera.exe
+C:\Repositorio2Dam\Cesar\Primera\Primera\obj\x86\Debug\Primera.pdb

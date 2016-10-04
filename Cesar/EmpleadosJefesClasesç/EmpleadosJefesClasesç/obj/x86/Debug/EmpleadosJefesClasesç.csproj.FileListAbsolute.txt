@@ -1,0 +1,4 @@
+C:\Repositorio2Dam\Cesar\EmpleadosJefesClasesç\EmpleadosJefesClasesç\bin\Debug\EmpleadosJefesClasesç.exe
+C:\Repositorio2Dam\Cesar\EmpleadosJefesClasesç\EmpleadosJefesClasesç\bin\Debug\EmpleadosJefesClasesç.pdb
+C:\Repositorio2Dam\Cesar\EmpleadosJefesClasesç\EmpleadosJefesClasesç\obj\x86\Debug\EmpleadosJefesClasesç.exe
+C:\Repositorio2Dam\Cesar\EmpleadosJefesClasesç\EmpleadosJefesClasesç\obj\x86\Debug\EmpleadosJefesClasesç.pdb
