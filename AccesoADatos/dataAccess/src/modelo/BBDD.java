@@ -12,9 +12,10 @@ public class BBDD
 {
   public static void main( String args[] ) throws SQLException{
 	  //http://stackoverflow.com/questions/24963259/need-help-setting-up-sqlite-on-eclipse-with-java-for-the-first-time
-	//TODO: CERRAR CONEXIONES
+	  //TODO: CERRAR CONEXIONES
 	  //TODO: Si la select sale vacia no mostrar nada
 	  //TODO: DARLE FORMATO
+	  
   }
   //SELECT name FROM sqlite_master WHERE type='table' AND name='table_name';
   
