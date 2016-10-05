@@ -41,7 +41,7 @@ public class Utilidades {
 		InputStreamReader entrada = new InputStreamReader(System.in);
 		BufferedReader teclado = new BufferedReader(entrada);
 		try {
-			caracter = (char) System.in.read();
+			caracter = teclado.readLine().charAt(0);
 		} catch (IOException er) {
 			System.out.println("error al introducir datos");
 			System.exit(0);

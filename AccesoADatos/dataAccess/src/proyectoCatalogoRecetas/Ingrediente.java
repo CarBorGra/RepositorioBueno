@@ -3,6 +3,11 @@ package proyectoCatalogoRecetas;
 import java.io.Serializable;
 
 public class Ingrediente implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public Ingrediente(boolean gas, double alcohol, String base, String sabor, String nombre) {
 		super();
 		this.gas = gas;
@@ -10,6 +15,9 @@ public class Ingrediente implements Serializable{
 		this.base = base;
 		this.sabor = sabor;
 		this.nombre = nombre;
+	}
+	public Ingrediente(String nombre){
+		this.nombre=nombre;
 	}
 	boolean gas;
 	double alcohol;
