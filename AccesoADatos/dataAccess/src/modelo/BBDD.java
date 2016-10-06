@@ -8,18 +8,17 @@ import java.sql.Statement;
 
 import proyectoCatalogoRecetas.Ingrediente;
 
-public class BBDD
+public class BBDD extends InteraccionBaseDatos 
 {
-
+	  //TODO Hacer una interfaz??
 	  //http://stackoverflow.com/questions/24963259/need-help-setting-up-sqlite-on-eclipse-with-java-for-the-first-time
-	  //TODO capturar excepciones
 	  //TODO Preguntar sobre como manejar los borrados
 	  //TODO se puede abrir y cerrar la conexion con un par de metodos?
 	  //TODO Mejorar borrado de ingredientes, cosa de uppercase
 	  //TODO Controlar excepcion puede que no exista la tabla, quedan algunas
   
-
-	public static void mostrarTodo(String opcion) throws SQLException{
+	@Override
+	public void mostrarTodo(String opcion) throws SQLException {
 	    Connection c = null;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
@@ -36,7 +35,7 @@ public class BBDD
 		if(resultado.next()){
 			System.out.printf("%15.15s||%15.15s||%10.10s||%10.10s||%15.15s\n", "Nombre","Sabor","Base","Alcohol","Gas");
 			System.out.printf("-------------------------------------------------------------------------\n");
-			while(resultado.next()){
+			do {
 				String nombre = resultado.getString("Nombre");
 				String sabor = resultado.getString("Sabor");
 				String base = resultado.getString("Base");
@@ -48,18 +47,14 @@ public class BBDD
 					gas = "No tiene gas";
 				}
 				System.out.printf("%15.15s||%15.15s||%10.10s||%10.1f||%15.15s\n", nombre, sabor, base, alcohol,gas);
-			}
+			} while (resultado.next());
 		}else{
 			System.out.println("La tabla no tiene datos");
 		}
 		c.close();
 	}
-
-	/**while (rs.next()) {
-		  String lastName = rs.getString("Lname");
-		  System.out.println(lastName + "\n");
-		}**/
-	public static void BorrarFilaIngredientes(Ingrediente IngredienteConNombre) throws SQLException{
+	@Override
+	public void BorrarFilaIngredientes(Ingrediente IngredienteConNombre) throws SQLException{
 		Connection c = null;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
@@ -77,7 +72,8 @@ public class BBDD
 	    c.close();
 	}
 	
-	public static void crearTablaIngredientes() throws SQLException{
+	@Override
+	public void crearTablaIngredientes() throws SQLException{
 		Connection c = null;
 	    ResultSet resultado = null;
 	    try {
@@ -100,7 +96,9 @@ public class BBDD
 	    }
 	    c.close();
 	}
-	public static void borrarTablaIngredientes() throws SQLException{
+	
+	@Override
+	public void borrarTablaIngredientes() throws SQLException{
 		Connection c = null;
 	    ResultSet resultado = null;
 	    try {
@@ -119,14 +117,13 @@ public class BBDD
 		    sentencia.execute(sql);
 	    	System.out.println("La tabla ha sido borrada.");
 	    }else{
-
 	    	System.out.println("La tabla no existe.");
 	    }
 	    c.close();
 	}
 
-	
-	public static void insertarValoresIngredientes(Ingrediente ingrediente) throws SQLException{
+	@Override
+	public void insertarValoresIngredientes(Ingrediente ingrediente) throws SQLException{
 		int conversionBoolean;
 		if (ingrediente.isGas()){
 			conversionBoolean = 1;
@@ -156,7 +153,8 @@ public class BBDD
 	    c.close();
 	}
 
-	public static boolean mostrarUnIngrediente(String ingrediente) throws SQLException {
+	@Override
+	public boolean mostrarUnIngrediente(String ingrediente) throws SQLException {
 		Connection c = null;
 	    ResultSet resultado = null;
 	    try {
@@ -193,7 +191,8 @@ public class BBDD
 		}
 	}
 
-	public static void actualizarIngrediente(Ingrediente actualizarIngrediente, String nombreParaActualizar) throws SQLException {
+	@Override
+	public void actualizarIngrediente(Ingrediente actualizarIngrediente, String nombreParaActualizar) throws SQLException {
 		Connection c = null;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
@@ -208,7 +207,7 @@ public class BBDD
 	    if (actualizarIngrediente.isGas()){
 	    	tieneGas=1;
 	    }else{
-	    	tieneGas=2;
+	    	tieneGas=0;
 	    }
 	    String sql = "UPDATE Ingredientes SET "
 	    		+"Nombre='"+actualizarIngrediente.getNombre()

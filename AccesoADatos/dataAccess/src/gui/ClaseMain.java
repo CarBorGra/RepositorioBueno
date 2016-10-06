@@ -4,18 +4,29 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import modelo.BBDD;
+import modelo.DB4o;
 import proyectoCatalogoRecetas.Ingrediente;
 import utilidades.Utilidades;
 
 public class ClaseMain {
 
 	public static void main(String[] args) throws SQLException {
-
+		
+		switch(2){
+			case 1:
+				break;
+				
+			case 2:
+				break;
+				
+			default:
+				break;
+		}
 		int opcion = menu();
 		while(opcion!=0){
 			switch(opcion){
 				case 1: //Mostrar Ingredientes
-					BBDD.mostrarTodo("Ingredientes");
+					objetobase.mostrarTodo("Ingredientes");
 					break;
 					
 				case 2://Modificar Ingredientes
@@ -82,6 +93,7 @@ public class ClaseMain {
 		Ingrediente resultado = new Ingrediente(gasIng, alcoholIng, baseIng, saborIng, nombreIng);
 		return resultado;
 	}
+	
 	public static int menu(){
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
 		int opcion = 0;
@@ -94,7 +106,7 @@ public class ClaseMain {
 		System.out.println("6.- Borrar tabla Ingredientes.");
 		System.out.println("0.- Salir.");
 		opcion = reader.nextInt();
-		//reader.close(); ERROR
+		//reader.close();
 		return opcion;
 	}
 }
