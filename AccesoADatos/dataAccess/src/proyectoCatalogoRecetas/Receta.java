@@ -1,6 +1,12 @@
 package proyectoCatalogoRecetas;
 
-public class Receta {
+import java.io.Serializable;
+
+public class Receta implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String nombre;
 	String recipiente;
 	String notas;
@@ -20,7 +26,9 @@ public class Receta {
 		this.ing2 = ing2;
 		this.ing3 = ing3;
 	}
-	
+	public Receta(String nombre){
+		this.nombre = nombre;
+	}
 	
 	public String getNombre() {
 		return nombre;
