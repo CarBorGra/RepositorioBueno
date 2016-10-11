@@ -9,6 +9,7 @@ import proyectoCatalogoRecetas.Ingrediente;
 import proyectoCatalogoRecetas.Receta;
 import utilidades.Utilidades;
 import modelo.InteraccionBaseDatos;
+import modelo.MySql;
 
 public class ClaseMain {
 
@@ -22,6 +23,9 @@ public class ClaseMain {
 				break;
 			case 2:
 				objetobase = new DB4o();
+				break;
+			case 3:
+				objetobase = new MySql();
 				break;
 			default:
 				break;
@@ -149,7 +153,7 @@ public class ClaseMain {
 		return resultado;
 	}
 	public static Receta recetaDesdeInput(){
-//	public Receta(String nombre, String recipiente, String notas, String preparacion, Ingrediente ing1,Ingrediente ing2, Ingrediente ing3) {
+		//	public Receta(String nombre, String recipiente, String notas, String preparacion, Ingrediente ing1,Ingrediente ing2, Ingrediente ing3) {
 		String nombre = Utilidades.introducirCadena("Introduzca el nombre de la receta: ");
 		String recipiente = Utilidades.introducirCadena("Introduzca el nombre del recipiente: ");
 		String notas = Utilidades.introducirCadena("Introduzca algunas notas: ");
@@ -187,7 +191,7 @@ public class ClaseMain {
 		System.out.println("Elija una base de datos con la que trabajar: ");
 		System.out.println("1.- Sqlite.");
 		System.out.println("2.- DB4o.");
-		System.out.println("3.- Otra.");
+		System.out.println("3.- MySql.");
 		System.out.println("4.- Otramas.");
 		opcion = reader.nextInt();
 		return opcion;
