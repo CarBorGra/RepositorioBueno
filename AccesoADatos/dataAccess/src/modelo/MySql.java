@@ -11,7 +11,7 @@ import proyectoCatalogoRecetas.Receta;
 
 public class MySql implements InteraccionBaseDatos{
 
-	//root ""
+	//jdbc:mysql://localhost/recetas?" + "user=" + user + "&password=" + pass);
 	@Override
 	public boolean comprobarExisteTabla(String nombretabla) throws SQLException {
 		Connection conn = conexion("root","");

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-oct-2016 12:16:24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="primero.Emple" table="emple" catalog="empledepar">
+        <composite-id name="id" class="primero.EmpleId">
+            <key-property name="empNo" type="short">
+                <column name="EMP_NO" />
+            </key-property>
+            <key-property name="apellido" type="string">
+                <column name="APELLIDO" length="10" />
+            </key-property>
+            <key-property name="oficio" type="string">
+                <column name="OFICIO" length="10" />
+            </key-property>
+            <key-property name="dir" type="java.lang.Short">
+                <column name="DIR" />
+            </key-property>
+            <key-property name="fechaAlt" type="timestamp">
+                <column name="FECHA_ALT" length="19" />
+            </key-property>
+            <key-property name="salario" type="java.lang.Integer">
+                <column name="SALARIO" />
+            </key-property>
+            <key-property name="comision" type="java.lang.Integer">
+                <column name="COMISION" />
+            </key-property>
+            <key-property name="deptNo" type="byte">
+                <column name="DEPT_NO" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
